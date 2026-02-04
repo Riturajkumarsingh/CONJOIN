@@ -1,0 +1,16 @@
+# Prefer HTML index over PHP
+DirectoryIndex index.html
+
+# Redirect legacy PHP routes to SPA anchors
+RewriteEngine On
+
+# Redirect index.php to index.html
+RewriteRule ^index\.php$ index.html [R=302,L]
+
+# Section redirects
+RewriteRule ^about\.php$ index.html#about [R=302,L]
+RewriteRule ^product\.php$ index.html#product [R=302,L]
+RewriteRule ^founders\.php$ index.html#founders [R=302,L]
+RewriteRule ^investors\.php$ index.html#investors [R=302,L]
+RewriteRule ^vision\.php$ index.html#vision [R=302,L]
+RewriteRule ^contact\.php$ index.html#contact [R=302,L]
